@@ -9,18 +9,18 @@ begin
 
   { Validacion robusta para las horas trabajadas }
   repeat
-    Write('Ingrese el numero de horas trabajadas (>= 0): ');
+    Write('Ingrese el numero de horas trabajadas: ');
     ReadLn(horas);
     if horas < 0 then
-      WriteLn('[AVISO] Las horas no pueden ser negativas. Reintente.');
+      WriteLn('Error:Las horas no pueden ser negativas.');
   until horas >= 0;
 
   { Validacion robusta para la tarifa por hora }
   repeat
-    Write('Ingrese la tarifa normal por hora (> 0): ');
+    Write('Ingrese la tarifa normal por hora: ');
     ReadLn(tarifa);
     if tarifa <= 0 then
-      WriteLn('[AVISO] La tarifa debe ser mayor que cero. Reintente.');
+      WriteLn('Error: La tarifa debe ser mayor que cero.');
   until tarifa > 0;
 
   { Calculo del Salario Bruto desglosado }
